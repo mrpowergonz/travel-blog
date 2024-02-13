@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'navbar.html' %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='script.js') }}"
+    ></script>
+
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+
+    <title class="text-xl font-semibold">My travelling Blog</title>
+
+</head>
+<body>
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='images/background.png') }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+    
+    <div class="container mx-auto pt-10 flex justify-center">
+        <h1 class="text-xl font-semibold">Bienvenido a mi blog de viaje!</h1>
+    </div>
+    <div class="container mx-auto pt-10  flex justify-center">   
+        <p class="text-l font-normal">
+            <div class= "flex flex-col space-y-4">
+                <span> Este es un blog simple donde comparto mis experiencias y consejos para distintos viajes. </span>
+                <span> Aprenderas a realizar viajes de la manera mas eficiente posible y tambien esta enfocado </span>
+                <span> a si quieres irte a vivir o trabajar a otro pais.</span>
+                <span> ¡Siéntete libre de navegar!</span>
+            </div>
+        </p>
+    </div>
+
+     <!-- Image slider section -->
+     <!-- Image slider section -->
+<div class="container mx-auto mt-10 mb-20  flex justify-center relative pb-20"> <!-- Add relative positioning -->
+    <div id="slider">
+        <div id="slides">
+            <div class="slide flex justify-center scroll-smooth focus:scroll-auto"><img src="{{ url_for('static', filename='images/somo.jpg') }}"/></div>
+            <div class="slide flex justify-center scroll-smooth focus:scroll-auto"><img src="{{ url_for('static', filename='images/aurora.jpg') }}"/></div>
+            
+            <!-- Add more slides as needed -->
+        </div>
+        <button class="arrow arrow-left" id="prevSlideBtn">&#10094;</button>
+        <button class="arrow arrow-right" id="nextSlideBtn">&#10095;</button>
+    </div>
+</div>
+
+</body>
+<footer class="relative bottom-0 w-full bg-gray-800 pt-50">
+    <div class="w-full pr-1 pt-1 pb-1" >
+        <p class="text-lg text-gray-500 text-center">Web page developed by</p>
+        <p class="text-lg text-gray-500 text-center">Adam Power Gonzalez</p>
+    </div>
+</footer>
+</html>

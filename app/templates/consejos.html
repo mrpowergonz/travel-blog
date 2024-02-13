@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+
+{% include 'navbar.html' %}
+<head>
+<!-- Content specific to the About page goes here -->
+<h1>About Us</h1>
+<p>This is the About page of our blog.</p>
+
+</head>
+<body>
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='images/background.png') }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</body>
+
+<footer class="absolute bottom-0 w-full bg-gray-800 pt-50">
+    <div class="w-full pr-1 pt-1 pb-1" >
+        <p class="text-lg text-gray-500 text-center">Web page developed by</p>
+        <p class="text-lg text-gray-500 text-center">Adam Power Gonzalez</p>
+    </div>
+</footer>
+
+</html>
