@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     
-
-{% include 'navbar.html' %}
-<head>
-    <h1>Blog</h1>
-    <p>This is the Blog page of our blog.</p>
+    
 </head>
 <body>
     <style>
@@ -20,13 +15,18 @@
             background-repeat: no-repeat;
         }
     </style>
+    {% include 'navbar.html' %}
     
-</body>
-<footer class="absolute bottom-0 w-full bg-gray-800 pt-50">
-    <div class="w-full pr-1 pt-1 pb-1" >
-        <p class="text-lg text-gray-500 text-center">Web page developed by</p>
-        <p class="text-lg text-gray-500 text-center">Adam Power Gonzalez</p>
+    <div>
+        <h1>Blog</h1>
+        <p>This is the Blog page of our blog.</p>
     </div>
-</footer>
 
+    <footer class="absolute bottom-0 w-full bg-gray-800 pt-50">
+        <div class="w-full pr-1 pt-1 pb-1" >
+            <p class="text-lg text-gray-500 text-center">Web page developed by</p>
+            <p class="text-lg text-gray-500 text-center">Adam Power Gonzalez</p>
+        </div>
+    </footer>
+</body>
 </html>

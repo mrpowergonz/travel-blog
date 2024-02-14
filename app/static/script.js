@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             slides[i].style.display = 'none';
         }
         slides[slideIndex].style.display = 'flex';
-        slides[slideIndex].classList.add('center-items'); // Add class to center items
+        slides[slideIndex].classList.add('center-items'); 
         slideIndex++;
 
         // Clear existing timeout before starting a new one
