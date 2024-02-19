@@ -15,7 +15,6 @@
         }
     </style>
 
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
 
     <title class="text-xl font-semibold">My travelling Blog</title>
 
@@ -32,9 +31,13 @@
         }
     </style>
     
-    <div class="container mx-auto pt-10 flex justify-center">
-        <h1 class="text-xl font-semibold">Bienvenido a mi blog de viaje!</h1>
-    </div>
+    <blockquote class="container text-2xl font-semibold italic mx-auto pt-10 flex justify-center">
+        Bienvenido a mi 
+        <span class=" ml-2 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-gradient-to-r from-green-500 to-teal-400  relative inline-block">
+            <span class="relative text-white ">blog de viaje!</span>
+        </span>
+    </blockquote>
+    
     <div class="container mx-auto pt-10  flex justify-center">   
         <p class="text-l font-normal">
             <div class= "flex flex-col space-y-4">
@@ -67,6 +70,37 @@
                 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                     <img src="{{ url_for('static', filename='images/aurora.jpg') }}" class="absolute inset-0 object-fill size-full" alt="">
                 </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="{{ url_for('static', filename='images/1.JPG') }}" class="absolute inset-0 object-fill size-full" alt="">
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="{{ url_for('static', filename='images/2.jpg') }}" class="absolute inset-0 object-fill size-full" alt="">
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="{{ url_for('static', filename='images/3.jpg') }}" class="absolute inset-0 object-fill size-full" alt="">
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="{{ url_for('static', filename='images/6.jpg') }}" class="absolute inset-0 object-fill size-full" alt="">
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="{{ url_for('static', filename='images/7.jpg') }}" class="absolute inset-0 object-fill size-full" alt="">
+                </div>
+                
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="{{ url_for('static', filename='images/10.JPG') }}" class="absolute inset-0 object-fill size-full" alt="">
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="{{ url_for('static', filename='images/11.jpg') }}" class="absolute inset-0 object-fill size-full" alt="">
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="{{ url_for('static', filename='images/12.jpg') }}" class="absolute inset-0 object-fill size-full" alt="">
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="{{ url_for('static', filename='images/13.jpg') }}" class="absolute inset-0 object-fill size-full" alt="">
+                </div>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="{{ url_for('static', filename='images/15.jpg') }}" class="absolute inset-0 object-fill size-full" alt="">
+                </div>
             
         </div>
         <!-- Buttons -->
@@ -94,7 +128,7 @@
 
 
     <!-- Footer -->
-    <footer class="realative bottom-0 w-full bg-gray-800">
+    <footer class="relative bottom-0 w-full ">
         <div class="w-full pr-1 pt-1 pb-1">
             <p class="text-lg text-gray-500 text-center">Web page developed by</p>
             <p class="text-lg text-gray-500 text-center">Adam Power Gonzalez</p>

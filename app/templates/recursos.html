@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html lang="en"> 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
 
-{% include 'navbar.html' %}
+
+
 
 <head>
-    <h1>Contact Us</h1>
-    <p>This is the Contact page of our blog.</p>
-</head>
-<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
             background-image: url('{{ url_for('static', filename='images/background.png') }}');
             background-size: cover;
             background-repeat: no-repeat;
         }
+        /* Estilos para el contenedor principal */
+        .main-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto; /* Secciones de encabezado, contenido y pie de página */
+            min-height: 100vh; /* Altura mínima de la página */
+        }
+        /* Estilos para las tarjetas */
+        .grid-item {
+            padding: 20px; 
+        }
     </style>
-
-    
-<!-- cards section -->
+</head>
+<body>
+    {% include 'navbar.html' %}
+<div class="main-container">
+    <!-- Sección del Encabezado -->
+    <!-- cards section -->
 <div class="container mx-auto mt-10 pb-20">
-    <h1 class="text-xl font-bold pb-1 flex justify-center">Tarjetas de credito</h1>
-    <p class="text-l font-semibold pb-0 flex justify-center">A dia de hoy es necesario disponer de tarjetas de credito que puedas usar en distintos paises para intercambiar divisas a bajas comisiones</p>
+    <blockquote class="container text-3xl font-semibold italic mx-auto pt-10 mb-6 flex justify-center">
+        <span class=" ml-2 before:block before:absolute before:-inset-1 before:-skew-y-0 before:bg-gradient-to-r from-green-500 to-teal-400  relative inline-block">
+            <span class="relative text-white ">Tarjetas de credito</span>
+        </span>
+    </blockquote>
+    <p class="text-xl font-semibold pb-0 flex justify-center">A dia de hoy es necesario disponer de tarjetas de credito que puedas usar en distintos paises</p>
+    <p class="text-xl font-semibold pb-0 flex justify-center"> para intercambiar divisas a bajas comisiones</p>
     <div class= "flex flex-wrap justify-center pt-10 grid-container"> 
-        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 grid-item mr-5">
-            <a href="#">
+        <div class="max-w-sm shadow-xl bg-white border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700 grid-item mr-5">
+            <a>
                 <img class="rounded-t-lg" src="static/images/revolut.png" alt="Revolut logo" />
             </a>
             <div class="p-5">
-                <a href="#">
+                <a >
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white flex justify-center">Revolut</h5>
                 </a>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">"Revolut ofrece servicios bancarios, tarjetas de débito, cambio de divisas, comercio de acciones, admite gastos y retiros en cajeros automáticos en 120 monedas, y transferencias en 29 monedas directamente desde la aplicación</p>
@@ -46,12 +61,12 @@
         </div>
 
 
-        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 grid-item ml-5">
-            <a href="#">
+        <div class="max-w-sm shadow-xl bg-white border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700 grid-item ml-5">
+            <a >
                 <img class="rounded-t-lg p-4" src="static/images/wise1.png" alt="Wise logo" />
             </a>
             <div class="p-2">
-                <a href="#">
+                <a>
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white flex justify-center">Wise</h5>
                 </a>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Wise es una empresa de cambio de divisas con sede en el Reino Unido. Se especializa en transferencias de pagos transfronterizos. ¿Para qué se utiliza Wise? Wise es la mejor manera de enviar, gastar, recibir pagos y mantener dinero en diferentes monedas</p>
@@ -67,12 +82,18 @@
 </div>
 
 
+
 <div class="container mx-auto mt-10 pb-20">
-    <h1 class="text-xl font-bold pb-1 flex justify-center">Alojamiento</h1>
-    <p class="text-l font-semibold pb-0 flex justify-center">Tener varias opciones donde comparar alojamientos es algo totalmente necesario, en mi caso personal siempre recomiendo booking ya que tienen una amplia disponibilidad de alojamientos y hoteles</p>
+    <blockquote class="container text-3xl font-semibold italic mx-auto pt-10 mb-6 flex justify-center">
+        <span class=" ml-2 before:block before:absolute before:-inset-1 before:-skew-y-0 before:bg-gradient-to-r from-green-500 to-teal-400  relative inline-block">
+            <span class="relative text-white ">Alojamientos</span>
+        </span>
+    </blockquote>
+    <p class="text-xl font-semibold pb-0 flex justify-center">Tener varias opciones donde comparar alojamientos es algo totalmente necesario, en mi caso personal siempre recomiendo </p>
+    <p class="text-xl font-semibold pb-0 flex justify-center">booking ya que tienen una amplia disponibilidad de alojamientos y hoteles</p>
     <div class= "flex flex-wrap justify-center pt-10 grid-container"> 
         <div class= "flex flex-wrap justify-center pt-10 grid-container"> 
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 grid-item mr-5">
+            <div class="max-w-sm shadow-xl bg-white border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700 grid-item mr-5">
                 <a href="#">
                     <img class="rounded-t-lg" src="static/images/booking.png" alt="Booking logo" />
                 </a>
@@ -90,9 +111,9 @@
                 </div>
             </div>
 
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 grid-item mr-5">
+            <div class="max-w-sm shadow-xl bg-white border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700 grid-item mr-5">
             <a href="#">
-                <img class="rounded-t-lg p-2 mt-10" src="static/images/airbnb.png" alt="Airbnb logo" />
+                <img class="rounded-t-lg p-4 mt-12" src="static/images/airbnb.png" alt="Airbnb logo" />
             </a>
             <div class="p-5 ">
                 <a href="#">
@@ -107,14 +128,61 @@
                 </a>
             </div>
         </div>
-        </div>
+    </div>
+    <div class="container mx-auto mt-20 pb-20">
+        <blockquote class="container text-3xl font-semibold italic mx-auto pt-10 mb-6 rounded flex justify-center">
+            <span class=" ml-2 before:block before:absolute before:-inset-1 before:-skew-y-0  before:bg-gradient-to-r from-green-500 to-teal-400  relative inline-block">
+                <span class="relative text-white ">Viajes</span>
+            </span>
+        </blockquote>
+            <p class="text-xl font-semibold pb-0 flex justify-center">Las paginas que mas he utilizado han sido estas, ya que disponen de un monton de descuentos </p>
+            <p class="text-xl font-semibold pb-0 flex justify-center">y te permite ver varias fechas para organizarte tu viaje lo mejor posible</p>
+            <div class= "flex flex-wrap justify-center pt-10 grid-container"> 
+                <div class= "flex flex-wrap justify-center pt-10 grid-container"> 
+                    <div class="max-w-sm shadow-xl bg-white border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700 grid-item mr-5">
+                        <a href="#">
+                            <img class="rounded-t-l p-4" src="static/images/skyscanner.png" alt="Skyscanner logo" />
+                        </a>
+                        <div class="p-5">
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white flex justify-center">Skyscanner</h5>
+                            </a>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Skyscanner es un agregador de búsqueda y agencia de viajes con sede en Edimburgo, Escocia. El sitio está disponible en más de 30 idiomas y es utilizado por 100 millones de personas al mes. La compañía permite a las personas investigar y reservar opciones de viaje para sus viajes, incluyendo vuelos, hoteles y alquiler de coches.</p>
+                            <a href="https://www.ebooking.com/es/c/?lang_req=es_ES&currency=EUR&ebkp=b&currency=EUR&utm_source=google&utm_medium=cpc&utm_campaign=17631051527&utm_adgroup=138498574299&utm_adid=638303283532&gad_source=1&gclid=Cj0KCQiAw6yuBhDrARIsACf94RU7fcU13m3Oa77Ip684u58v8q5t4eb3oaZGILw7EtJu6k3hAH1p8KsaAiKxEALw_wcB" target="_blank" class="flex justify-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Leer mas
+                                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+        
+                    <div class="max-w-sm shadow-xl bg-white border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700 grid-item mr-5">
+                    <a href="#">
+                        <img class="rounded-t-lg p-4 mt-12" src="static/images/Trip.png" alt="Trip logo" />
+                    </a>
+                    <div class="p-5 ">
+                        <a href="#">
+                            <h5 class="mb-2 mt-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white flex justify-center">Trip</h5>
+                        </a>
+                        <p class="mb-14 font-normal text-gray-700 dark:text-gray-400">Trip.com es un conglomerado multinacional de servicios de viaje con 45,000 empleados. Es una de las agencias de viajes en línea más grandes del mundo, con más de 400 millones de usuarios en todo el mundo, y también es la empresa matriz de Skyscanner.</p>
+                        <a href="https://www.airbnb.es/?_set_bev_on_new_domain=1707837469_N2EzMjE0YWMzZjYz" target="_blank" class="flex justify-center px-3 py-2  text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Leer mas
+                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <footer class="relative bottom-0 w-full ">
+                <div class="w-full pr-1 pt-20 mt-8 pb-0" >
+                    <p class="text-lg text-gray-500 text-center">Web page developed by</p>
+                    <p class="text-lg text-gray-500 text-center">Adam Power Gonzalez</p>
+                </div>
+        </footer>
+    </div>
     
 </body>
-<footer class="relative bottom-0 w-full bg-gray-800 pt-50">
-    <div class="w-full pr-1 pt-1 pb-1" >
-        <p class="text-lg text-gray-500 text-center">Web page developed by</p>
-        <p class="text-lg text-gray-500 text-center">Adam Power Gonzalez</p>
-    </div>
-</footer>
 
 </html>

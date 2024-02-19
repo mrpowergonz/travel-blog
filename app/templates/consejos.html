@@ -1,21 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    
-
-
-{% include 'navbar.html' %}
-<head>
-<!-- Content specific to the About page goes here -->
-<h1>About Us</h1>
-<p>This is the About page of our blog.</p>
-
-</head>
-<body>
     <style>
         body {
             background-image: url('{{ url_for('static', filename='images/background.png') }}');
@@ -23,13 +11,60 @@
             background-repeat: no-repeat;
         }
     </style>
-</body>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <!-- Top Navbar -->
 
-<footer class="absolute bottom-0 w-full bg-gray-800 pt-50">
-    <div class="w-full pr-1 pt-1 pb-1" >
-        <p class="text-lg text-gray-500 text-center">Web page developed by</p>
-        <p class="text-lg text-gray-500 text-center">Adam Power Gonzalez</p>
+    
+    <div class="bg-gradient-to-r from-pink-100 via-pink-300 to-pink-100   p-4  flex justify-center fixed  w-full">
+        <a href="#noruega" class="text-white hover:underline mx-2">Noruega</a>
+        <a href="#portugal" class="text-white hover:underline mx-2">Portugal</a>
+        <a href="#irlanda" class="text-white hover:underline mx-2">Irlanda</a>
+        <a href="#marruecos" class="text-white hover:underline mx-2">Marruecos</a>
     </div>
-</footer>
 
+    <!-- Sections -->
+    <section id="noruega" class="py-16">
+        <h2 class="text-3xl font-bold text-gray-800">Noruega Section</h2>
+        <!-- Add content about Noruega here -->
+    </section>
+
+    <section id="portugal" class="py-16">
+        <h2 class="text-3xl font-bold text-gray-800">Portugal Section</h2>
+        <!-- Add content about Portugal here -->
+    </section>
+
+    <section id="irlanda" class="py-16 ">
+        <h2 class="text-3xl font-bold text-gray-800">Irlanda Section</h2>
+        <!-- Add content about Irlanda here -->
+    </section>
+
+    <section id="marruecos" class="py-16">
+        <h2 class="text-3xl font-bold text-gray-800">Marruecos Section</h2>
+        <!-- Add content about Marruecos here -->
+    </section>
+
+    
+
+    <footer class="absolute bottom-0 w-full pt-16  text-white text-center">
+        <div>
+            <p class="text-lg text-gray-500 text-center">Web page developed by</p>
+            <p class="text-lg text-gray-500 text-center">Adam Power Gonzalez</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
