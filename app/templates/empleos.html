@@ -27,7 +27,11 @@
     <div class="container mx-auto pt-10  flex justify-center">   
         <p class="text-l font-normal">
             <div class= "flex flex-col space-y-4">
-                <h1 class="container text-2xl font-semibold  mx-auto pt-10 flex justify-center">Voluntariados </h1>
+                <blockquote class="container text-2xl font-semibold  mx-auto pt-10 flex justify-center">
+                    <span class=" ml-2 before:block before:absolute before:-inset-1 before:-skew-y-2 before:bg-gradient-to-r from-green-500 to-teal-400  relative inline-block">
+                        <span class="relative text-white ">Voluntariados</span>
+                    </span>
+                </blockquote>
                 <span> A veces si tienes un presupuesto pequeño y lo que quieres vivir es una experiencia nueva, </span>
                 <span> sin duda alguna hacer voluntariados es una muy buena opcion, ya que se encargan de ofrecer </span>
                 <span> alojamiento, comida e incluso algo de dinero o (pocket money) para tener algun gasto personal.</span>
@@ -36,36 +40,54 @@
             </div>
         </p>
     </div>
-    <section class="bg-gray-100 rounded-lg shadow-md py-6 px-4 max-w-screen-lg mt-10 mx-auto">
-        <div class="container mx-auto pt-3">
-            <blockquote class="text-center">
-                <h1 class="text-xl font-bold mb-4">Experiencias propias</h1>
-                <p class="text-left">
+    <section class="bg-gray-100 rounded-lg shadow-md  py-8 px-8 max-w-screen-lg mt-10 mx-auto">
+        <div class="container mx-auto flex flex-wrap items-center justify-between">
+            <blockquote class="w-full md:w-2/5 text-left mb-4 md:mb-0">
+                <h1 class="text-xl flex justify-center font-bold mb-4">Experiencias propias</h1>
+                <p>
                     <span>Yo en mi caso ya lo he hecho 3 veces, una en Irlanda de apicultor, otra en Marruecos de fotógrafo y el último</span>
                     <span>en Noruega como recepcionista y guía de montaña (en este caso fue remunerado), este último lo he realizado</span>
                     <span>este último año. Como Noruega es un país tan caro para el resto del mundo esta opción me permitió vivir</span>
                     <span>casi gratis una de las mejores experiencias que he tenido en mi vida, es un país increíble y me ha permitido incluso</span>
-                    <span  class="relative flex justify-center text-2xl text-purple-500 ">ahorrar dinero.</span>
+                    <span class="text-purple-500">ahorrar dinero.</span>
                 </p>
             </blockquote>
+            <div class="w-full md:w-3/5 flex justify-right md:justify-end pl-5 rounded-lg">
+                <img src="{{ url_for('static', filename='images/plantando.jpg') }}" class="rounded-lg">
+            </div>
         </div>
     </section>
-    
     <div class="container mx-auto pt-10  flex justify-center">   
-        <p class="text-l font-normal">
-            <div class= "flex flex-col space-y-4">
-                <h1 class="container text-2xl font-semibold  mx-auto pt-10 flex justify-center">Empleos </h1>
-                <span> ¿A quien no le ha entrado curiosidad por trabajar en el extranjero? </span>
-                <span> Siempre es una buena opcion lanzarse a la piscina y ver que ofertas de empleo </span>
-                <span> existen en el extranjero, incluso si es del puesto que estas trabajando actualmente </span>
-                <span> te puedes llevar mas de una sorpresa, por lo general dependiendo del pais que elijas</span>
-                <span> vas a tener mejores condiciones laborales, mejor remunerado e incluso posibilidades de </span>
-                <span  class="relative flex justify-center text-2xl text-purple-500 ">Crecer en una empresa.</span>
-
-            </div>
-        </p>
+        <p class="text-l font-normal">Hacer voluntariados es un experiencia muy enriquecedora y la manera perfecta de conocer un pais o cultura.</p>
     </div>
     
+    <div class="container mx-auto pt-12 flex justify-center space-y-4 flex-col">   
+        <blockquote class="container text-3xl font-semibold italic mx-auto pt-10 mb-6 flex justify-center">
+            <span class="ml-2 before:block before:absolute before:-inset-1 before:-skew-y-1 before:bg-gradient-to-r from-green-500 to-teal-400 relative inline-block">
+                <span class="relative text-white">Empleos</span>
+            </span>
+        </blockquote>
+    
+            <span class=" flex justify-center"> ¿A quien no le ha entrado curiosidad por trabajar en el extranjero? </span>
+            <span class="relative flex justify-center"> Siempre es una buena opcion lanzarse a la piscina y ver que ofertas de empleo </span>
+            <span class="relative flex justify-center"> existen en el extranjero, incluso si es del puesto que estas trabajando actualmente </span>
+            <span class="relative flex justify-center"> te puedes llevar mas de una sorpresa, por lo general dependiendo del pais que elijas</span>
+            <span class="relative flex justify-center"> vas a tener mejores condiciones laborales, mejor remunerado e incluso posibilidades de </span>
+            <span class="relative flex justify-center text-2xl pb-10 text-purple-500">Crecer en una empresa.</span>
+        
+    </div>
+    
+    <div class="container mx-auto pt-12  flex justify-center space-y-4 flex-col"> 
+        <span class=" text-2xl flex justify-center space-y-4 flex-col">
+            <span>Aqui os dejo algunos consejos y links</span>
+        </span>
+        <span>-Si no teneis muchos recursos ni experiencia siempre es una buena opcion trabajar en hoteles o algo de este tipo, ya que suelen ofrecer alojamiento y comida </span>
+        <span>por lo que solo te tienes que encargar de los billetes del viaje y te va a simplificar mucho mas tu viaje.</span>
+        <span>Lo bueno tambien esque si estas buscando una experiencia para una temporada, este plan es ideal ya que</span>
+        <span>los hostels sueles contratar personal desde mayo hasta Septiembre o Octubre depende de donde estes buscando,</span>
+        <span>en mi caso, trabaje de mayo a Septiembre en Noruega pero acabe quedandome un mes entero mas solo para ver las</span>
+        <span>auroras boreales y ahorrar algo mas de dinero, ya que en paises nordicos los sueldos son bastante elevados</span>
+    </div> 
     
 
     <footer class="relative bottom-0 w-full 0 pt-50">
